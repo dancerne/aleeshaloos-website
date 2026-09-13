@@ -5,7 +5,6 @@ let openedFrom;
 document.querySelectorAll('.art-button').forEach((button) => {
   button.addEventListener('click', () => {
     openedFrom = button;
-    document.querySelector('#dialog-title').textContent = button.dataset.title;
     const artwork = button.querySelector('.art-window').cloneNode(true);
     artwork.querySelector('img').loading = 'eager';
     dialogArt.replaceChildren(artwork);
